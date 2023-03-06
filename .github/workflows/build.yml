@@ -9,15 +9,24 @@ jobs:
     - uses: actions/setup-node@master
       with:
         node-version: 14
+    - name: install rpm tool
+      run:
+        sudo apt-get update;
+        sudo apt install rpm
     - name: install dependencies
       run: npm install
     - name: build
       run: npm run make
-    - name: Store artifact for distribution
+    - name: Store artifact for .deb
       uses: actions/upload-artifact@v3
       with:
-        name: distributable
+        name: electron-publish-example_1.2.0_amd64.deb
         path: out/make/deb/x64/electron-publish-example_1.2.0_amd64.deb
+    - name: Store artifact for .rpm
+      uses: actions/upload-artifact@v3
+      with:
+        name: electron-publish-example_1.2.0_amd64.rpm
+        path: out/make/rpm/x64/electron-publish-example_1.2.0_amd64.rpm
 
   build_on_mac:
     runs-on: macos-latest
@@ -41,4 +50,5 @@ jobs:
     - name: install dependencies
       run: npm install
     - name: build
-      run: npm run make
+      run: npm run make; DIR D:\a\electron-publish-example\electron-publish-example\out\make /S
+
