@@ -22,11 +22,13 @@ jobs:
       with:
         name: electron-publish-example_1.2.0_amd64.deb
         path: out/make/deb/x64/electron-publish-example_1.2.0_amd64.deb
+    - name: Location
+      run: ls -R out/make
     - name: Store artifact for .rpm
       uses: actions/upload-artifact@v3
       with:
-        name: electron-publish-example_1.2.0_amd64.rpm
-        path: out/make/rpm/x64/electron-publish-example_1.2.0-1.x86_64.rpm
+        name: electron-publish-example_1.2.0-1.x86_64.rpm
+        path: out/make/rpm/x64/electron-publish-example_1.2.0.x86_64.rpm
 
   build_on_mac:
     runs-on: macos-latest
@@ -52,5 +54,5 @@ jobs:
     - name: build
       run: npm run make
     - name: Location
-      run: dir out\make\squirrel.windows
+      run: dir out\make\squirrel.windows\x64
 
