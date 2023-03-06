@@ -26,7 +26,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: electron-publish-example_1.2.0_amd64.rpm
-        path: out/make/rpm/x64/electron-publish-example_1.2.0_amd64.rpm
+        path: out/make/rpm/x64/electron-publish-example_1.2.0-1.x86_64.rpm
 
   build_on_mac:
     runs-on: macos-latest
@@ -52,5 +52,5 @@ jobs:
     - name: build
       run: npm run make
     - name: Location
-      run: dir out\make
+      run: dir out\make\squirrel.windows
 
