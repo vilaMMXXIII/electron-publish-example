@@ -1,11 +1,11 @@
 name: Build
-on: [push, pull_request]
+on: [push, workflow_dispatch]
 
 jobs:
   build_on_linux:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: actions/setup-node@master
       with:
         node-version: 14
@@ -13,11 +13,16 @@ jobs:
       run: npm install
     - name: build
       run: npm run make
+    - name: Store artifact for distribution
+      uses: actions/upload-artifact@v3
+      with:
+        name: distributable
+        path: out/make/deb/x64/electron-publish-example_1.2.0_amd64.deb
 
   build_on_mac:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: actions/setup-node@master
       with:
         node-version: 14
@@ -29,7 +34,7 @@ jobs:
   build_on_win:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: actions/setup-node@master
       with:
         node-version: 14
