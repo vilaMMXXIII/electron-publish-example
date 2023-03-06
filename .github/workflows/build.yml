@@ -46,7 +46,8 @@ jobs:
     - name: Store artifact for darwin as .zip
       uses: actions/upload-artifact@v3
       with:
-        name: out/make/zip/darwin/x64/electron-publish-example-darwin-x64-1.2.0.zip    
+        name: electron-publish-example-darwin-x64-1.2.0.zip
+        path: out/make/zip/darwin/x64/electron-publish-example-darwin-x64-1.2.0.zip    
       
   build_on_win:
     runs-on: windows-latest
