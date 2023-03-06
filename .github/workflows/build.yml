@@ -50,5 +50,5 @@ jobs:
     - name: install dependencies
       run: npm install
     - name: build
-      run: npm run make; DIR D:\a\electron-publish-example\electron-publish-example\out\make /S
+      run: npm run make; DIR out\make /S
 
