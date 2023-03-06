@@ -58,6 +58,6 @@ jobs:
     - name: Store artifact for .rpm
       uses: actions/upload-artifact@v3
       with:
-        name: electron-publish-example-1.2.0 Setup.exe
-        path: out\make\squirrel.windows\x64\'electron-publish-example-1.2.0 Setup.exe'
+        name: electron-publish-example-1.2.0.Setup.exe
+        path: out\make\squirrel.windows\x64\electron-publish-example-1.2.0.Setup.exe
 
