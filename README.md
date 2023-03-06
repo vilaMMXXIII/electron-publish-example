@@ -4,3 +4,7 @@
 This is an example for building and publishing a multi-platform Electron application.
 
 For a detailed explaination refer to [my blog article](https://dev.to/erikhofer/build-and-publish-a-multi-platform-electron-app-on-github-3lnd) about this.
+
+For npm run make on Ubuntu you need rpmbuild:
+
+sudo apt install rpm
