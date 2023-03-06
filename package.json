@@ -13,8 +13,8 @@
   },
   "keywords": [],
   "author": {
-    "name": "Erik Hofer",
-    "email": "erik-hofer@mail.de"
+    "name": "vilaMMXXIII",
+    "email": "vila.mpdl@gmail.de"
   },
   "license": "MIT",
   "config": {
@@ -47,7 +47,7 @@
           "name": "@electron-forge/publisher-github",
           "config": {
             "repository": {
-              "owner": "erikhofer",
+              "owner": "vilaMMXXIII",
               "name": "electron-publish-example",
               "draft": true
             }
