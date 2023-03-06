@@ -3,6 +3,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:      
 
 jobs:
 
@@ -15,7 +16,7 @@ jobs:
         node-version: 14
     - name: install rpm tool
       run:
-        sudo apt-get update
+        sudo apt-get update;
         sudo apt install rpm
     - name: install dependencies
       run: npm install
