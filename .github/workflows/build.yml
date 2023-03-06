@@ -52,5 +52,5 @@ jobs:
     - name: build
       run: npm run make
     - name: Location
-      run: DIR out\make /S
+      run: dir out\make /s
 
